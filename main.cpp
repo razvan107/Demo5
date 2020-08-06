@@ -1,20 +1,19 @@
 #include <iostream>
-
+#include <string>
 using namespace std;
 
 int main()
 {
-    int maxcount;
-    cout << "How much should I count?" << endl;
-    cin >> maxcount;
+    int z, cycleCounter, mincount, cycles, maxcycle;
+    z = cycleCounter = mincount = 0;
+    cout << "How many cycles should I count?" << endl;
+    cin >> cycles;
     cout << "How many numbers per cycle?" << endl;
-    int maxcycle;
     cin >> maxcycle;
-    int z = 0;
-    int counter = 0;
-    while(counter < maxcount){
-        int x = 0;
 
+
+    while(cycleCounter < cycles){
+        int x = 0;
         while(x != maxcycle){
             int y = 3-(to_string(x).size());
             string pad(y,' ');
@@ -23,8 +22,10 @@ int main()
             x++;
             z++;
         }
-        cout << "Going backwards" << endl;
-        while(x !=0){
+
+    cout << "Going backwards" << endl;
+
+        while(x != mincount){
             int y = 3-(to_string(x).size());
             string pad(y,' ');
             string pad2 = pad + "   ";
@@ -32,8 +33,8 @@ int main()
             x--;
             z++;
         }
-        counter++;
-        if(counter != maxcount){cout << "Cycle completed. Going forward" << endl;}
-        else{cout << "Cycle counter reached "<< maxcount << endl;}
+        cycleCounter++;
+        if(cycleCounter != cycles){cout << "Cycle completed. Going forward" << endl;}
+        else{cout << "Cycle cycleCounter reached "<< cycles << endl;}
     }
 }

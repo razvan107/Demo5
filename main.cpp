@@ -4,7 +4,7 @@ using namespace std;
 
 int main()
 {
-    int z, cycleCounter, mincount, cycles, maxcycle;
+    int z, x, cycleCounter, mincount, cycles, maxcycle;
     z = cycleCounter = mincount = 0;
     cout << "How many cycles should I count?" << endl;
     cin >> cycles;
@@ -13,7 +13,6 @@ int main()
 
 //letstest
     while(cycleCounter < cycles){
-        int x = 0;
         while(x != maxcycle){
             int y = 3-(to_string(x).size());
             string pad(y,' ');
@@ -35,6 +34,6 @@ int main()
         }
         cycleCounter++;
         if(cycleCounter != cycles){cout << "Cycle completed. Going forward" << endl;}
-        else{cout << "Cycle cycleCounter reached "<< cycles << endl;}
+        else{cout << "Cycle counter reached "<< cycles << endl;}
     }
 }

@@ -11,7 +11,7 @@ int main()
     cout << "How many numbers per cycle?" << endl;
     cin >> maxcycle;
 
-
+//letstest
     while(cycleCounter < cycles){
         int x = 0;
         while(x != maxcycle){
